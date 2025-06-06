@@ -1,6 +1,6 @@
 --module "queue"
 
-Queue = {
+local Queue = {
   new = function(self)
     self.__index = self
     return setmetatable( {first=0, last=-1}, self)
@@ -27,3 +27,5 @@ Queue = {
   end
   
 }
+
+return Queue
